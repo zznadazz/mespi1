@@ -1,0 +1,217 @@
+:root {
+    --primary-color: #01579b;
+    --second-color: #88C6ED;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color: #dbdbdb;
+    --background-color-input: rgba(0,0,0,0.2);
+}
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex; /* Cái này cộng với modal__body margin auto thì sẽ chuyển hộp đăng kí ra giữa */
+}
+
+.modal__overlay {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+    url(https://images.rtl.fr/~c/770v513/rtl/www/1080509-une-personne-agee-dans-une-maison-de-retraite-illustration.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.modal__body {
+    margin: auto; /* Cái này cộng với modal display flex thì sẽ chuyển hộp đăng kí ra giữa */
+    position: relative;
+    z-index: 3; /* Giúp cho khung đăng kí nổi lên phần ảnh mờ */
+}
+
+.auth-form {
+    width: 500px;
+    background-color: var(--background-color-input);
+    border-radius: 5px; /* tạo khung tròn */
+    overflow: hidden; /* Thêm vào để phần khung cuối được tròn */
+}
+
+.auth-form__container {
+    padding: 0 32px;
+}
+
+.auth-form__header {
+    margin-top: 10px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; /* cái này giúp cho đăng kí với đăng nhập xa nhau */
+    padding: 0 12px;
+}
+
+.auth-form__heading {
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: var(--second-color);
+}
+
+/* Tính năng này khi bôi đen chữ chuyển sang màu khác */
+h3::selection {
+    background-color: #b3d4fc;
+    color: #333;
+    text-shadow: none; /* tính năng này giúp nổi bóng chữ 3D */
+}
+
+.auth-form__switch-btn {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    cursor: pointer; /* Khi di chuột vào thì nó sẽ biến thành hình trỏ chuột */
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    padding: 12px 12px;
+}
+
+/* ô nhập vào */
+.auth-form__input {
+    background-color: var(--background-color-input);
+    width: 100%;
+    height: 40px;
+    margin-top: 16px;
+    padding: 0 12px; /* cái này giúp cho chữ email cách 1 khoảng, không sát ô input */
+    font-size: 1.4rem;
+    border-radius: 2px; /* tạo khung tròn */
+    border: 1px solid var(--background-color-input);
+    outline: none;
+    color: var(--white-color);
+}
+
+::placeholder {
+    color: var(--white-color);
+}
+
+.auth-form__input:focus {
+    border-color: #888; /* Khi trỏ chuột vào khung input nó hiện ra màu này, nếu không thêm cái này thì nó sẽ thành màu xanh */
+}
+
+.auth-form__aside {
+    margin-top: 30px;
+}
+
+.auth-form__policy-text {
+    color: var(--white-color);
+    font-size: 1.3rem;
+    line-height: 1.8rem; /* khoảng cách giữa các dòng chữ */
+    text-align: center; /* chỉnh đoạn text ra giữa */
+    padding: 0 0 12px;
+}
+
+.auth-form__text-link {
+    color: var(--second-color);
+    text-decoration: none; /* bỏ gạch chân với link */
+}
+
+.auth-form__control {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.auth-form__control-link {
+    text-decoration: none;
+}
+
+.btn {
+    min-width: 142px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    font-size: 1.5rem;
+    padding: 0 12px;
+    cursor: pointer;
+    outline: none;
+    color: var(--text-color);
+    margin: 20px 3px;
+    align-items: center; /* phần tử đẩy vào giữa hàng (cột) */
+    display: flex; 
+    justify-content: center; /* đẩy các phần tử vào giữa hướng chính */
+    line-height: 1.6rem;
+}
+
+.btn.btn--normal:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.btn.btn--primary {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.btn.auth-form__control-back {
+    margin-right: 8px;
+}
+
+/* Vd cho nút không chạm vào được 
+.btn.btn--disabled {
+    cursor: default;
+    filter: brightness();
+    background-color: #c3c3c3;
+    color: #949494;
+}
+*/
+
+/* .auth-form__socials {
+    background-color: #F5F5F5;
+    padding: 12px 36px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+} */
+
+/* .auth-form__socials-icon {
+    font-size: 1.8rem; /* Tăng icon lên 
+} */
+
+/* .auth-form__socials--facebook {
+    background-color: #3A5A98;
+    color: var(--white-color);
+    margin-right: 8px;
+} */
+
+/* .auth-form__socials--facebook .auth-form__socials-icon {
+    color: var(--white-color);
+} */
+
+/* .auth-form__socials-title {
+    margin: 0 12px;
+} */
+
+/* .auth-form__socials--google {
+    background-color: var(--white-color);
+    margin-right: 8px;
+} */
+
+/* .btn.btn--size-s {
+    height: 32px;
+    font-size: 12px;
+    padding: 0 8px;
+} */

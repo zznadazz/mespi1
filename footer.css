@@ -1,0 +1,130 @@
+:root {
+    --primary-color: #01579b;
+    --second-color: #88C6ED;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color: #dbdbdb;
+    --background-color-input: rgba(0,0,0,0.2);
+}
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* toute la page / fenêtre  */
+.modal {
+    /* position: fixed; */
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex; /* cet attribut + modal__body margin auto déplacent la box au centre */
+    flex-direction: column;
+}
+
+/* Footer */
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+/* Test */
+.grid__column-2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.6667%;
+}
+
+.grid__column-2-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+
+.grid__column-10 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3334%;
+}
+
+.footer {
+    z-index: 3;
+    border-top: 8px solid var(--second-color);
+    background-color: var(--white-color);
+    padding-top: 30px;
+}
+
+.footer__heading {
+    font-size: 1.8rem;
+    text-transform: uppercase; /* Mettre tous les titres en majuscule */
+    color: var(--text-color);
+    padding-bottom: 8px;
+}
+
+.footer-list {
+    padding-left: 0;
+    list-style: none; /* Supprime le point devant chaque élément de la liste */
+}
+
+/* balise a de footer */
+.footer-item__link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #737373;
+    padding: 6px 0;
+    display: flex; /* Rendre padding plus large */
+    align-items: center;
+}
+
+/* En touchant le texte, la couleur change */
+.footer-item__link:hover {
+    color: var(--primary-color);
+}
+
+.footer-item__icon {
+    font-size: 1.6rem;
+    margin: -1px 8px 0 0;
+}
+
+.footer__bottom {
+    padding: 15px 0;
+    background-color: #F5F5F5;
+    margin-top: 30px;
+}
+
+.footer__text {
+    margin: 0;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #737373;
+    margin: 3px 0;
+}
+
+.footer__img {
+    padding: 0;
+    margin: 0;
+}
+
+.auth-form__bonus {
+    margin-top: -23px;
+}

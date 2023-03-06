@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    
+    <section class="header">
+    </section>
+
+    <section class="menu">
+      <nav>
+          <a href="http://"> <img src="logomespi.png"style="width: 180px"; height="180px" ></a>
+          <div class="search button">
+              <img src="search-flat-icon-9.jpg" style="width: 3em; height: 3em">
+              <input class="input-elevated" type="text" placeholder="Recherche ..."> 
+          </div> 
+          <div>
+              <ul>
+                  <li> <a href="mespi__html.html">ACCUEIL</a></li>
+                  <li> <a href="connexion.html">CONNEXION </a></li>
+                  <li> <a href="inscription.html"> INSCRIPTION</a></li>
+                  <li> <a href="Contact.html">CONTACT</a></li>
+                  <li> <a href="a_propos.html">A PROPOS</a></li>
+              </ul>
+          </div>
+      </nav>
+    </section>
+
+
+    <form method="post" action="traitement.php">
+
+        <fieldset style="border: 1px black; background-color: whitesmoke; width: 60%;  border-radius: 2.5%; border-style: double; margin: auto; padding: 1rem; overflow: hidden;">
+            <legend style="background-color: whitesmoke; text-underline-position: below;"><h2>Vos coordonnées: </h2></legend>
+
+
+            <p style=" background-color: whitesmoke ; margin: auto; padding: auto;">
+
+
+                <label for="name" style="background-color: whitesmoke " >Votre nom :</label>
+                <input style="margin-bottom: 1.5em" type="text" name="name" id="name" required />    
+
+                <br>
+
+                <label for="email" style=" background-color: whitesmoke">Votre mail :</label>
+                <input style="margin-bottom: 1.5em" type="email" name="email" id="email" required />
+                
+
+                
+                <br />
+                <!--
+                <label for="pass" style="background-color: whitesmoke">Votre mot de passe :</label>
+                <input style="margin-bottom: 1.5em" type="password" name="pass" id="pass" required />
+                -->
+
+            
+            </p>   
+    
+        </fieldset>
+       
+        <fieldset style=" border: 1px black; background-color: whitesmoke; width: 60%;  border-radius: 2.5%; border-style: double; margin: auto; margin-top: 2em; ; margin-bottom: 2em; padding: 1rem; overflow: hidden;">
+            <legend style="background-color: whitesmoke ; text-underline-position: below;"><h2>Votre message: </h2></legend>
+
+
+            <p style=" background-color: whitesmoke ; margin: auto; padding: auto;">
+            <label for="ameliorer">
+                <h4 style=" background-color: whitesmoke">Vous pouvez nous envoyer un message</h4>
+                </label>
+                <br />
+                
+
+                <textarea name="ameliorer" id="ameliorer" rows="10" cols="115" style="margin: auto; padding: auto; justify-content: left ; color: gray;">
+
+                Exemple: Bonjour, j'ai un problème avec mon mot de passe. Est-il possible de le récupérer?
+
+                </textarea>       
+            </p>
+
+            <input type="submit" value="Envoyer" style="background-color: rgb(44, 84, 193); color: white; height: 3em; width: 6em; margin-top: 2rem; margin-left: 22rem;"/>
+        </fieldset>
+
+        
+     </form>
+
+</body>
+</html>

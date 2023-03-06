@@ -1,0 +1,271 @@
+:root {
+    --primary-color: #01579b;
+    --second-color: #88C6ED;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color: #dbdbdb;
+    --background-color-input: rgba(0,0,0,0.2);
+}
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* toute la page / fenêtre  */
+.modal {
+    /* position: fixed; */
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex; /* cet attribut + modal__body margin auto déplacent la box au centre */
+    flex-direction: column;
+}
+
+/* Image de background  */
+.modal__overlay {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+    url(https://images.rtl.fr/~c/770v513/rtl/www/1080509-une-personne-agee-dans-une-maison-de-retraite-illustration.jpg);
+    background-position: center;
+    background-size: cover;
+    /* position: absolute;  */
+    position: fixed;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+/* une box / case */
+.modal__body {
+    margin: auto; /* cet attribut + modal display flex déplacent la box au centre */ 
+    margin-top: 200px;
+    margin-bottom: 200px;
+    position: relative;
+    z-index: 3; /* une box > image de background */
+    width: 500px;
+    background-color: var(--background-color-input);
+    border-radius: 5px; /* créer une bordure circulaire */
+    padding: 0 32px;
+}
+
+/* Créez un nouveau mot de passe */
+.auth-form__header {
+    margin-top: 20px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; /* Cela permet de s'inscrire et de se connecter loin l'un de l'autre */
+    padding: 0 12px;
+}
+
+.auth-form__heading {
+    font-size: 2.8rem;
+    font-weight: 400;
+    color: var(--second-color);
+}
+
+/* La couleur des lettres change lors du texte en surbrillance */
+h3::selection {
+    background-color: #b3d4fc;
+    color: #333;
+    text-shadow: none; /* Bulles de texte 3D */
+}
+
+/* Adresse Mail */
+.auth-form__input {
+    background-color: var(--background-color-input);
+    width: 100%;
+    height: 40px;
+    margin-top: 12px;
+    padding: 0 12px; /* Cela aide le texte de l'e-mail à être espacé d'une distance, pas à proximité de la zone de saisie */
+    font-size: 1.5rem;
+    border-radius: 2px; /* créer une bordure circulaire */
+    border: 1px solid var(--background-color-input);
+    outline: none;
+    color: var(--white-color);
+}
+
+::placeholder {
+    color: var(--white-color);
+}
+
+.auth-form__input:focus {
+    border-color: #888; /* Lorsque on pointe sur le cadre d'entrée, il affiche cette couleur, si on ne l'ajoute pas, il deviendra bleu */
+}
+
+/* Button Retourner à la page de connexion / Button Valider */
+.auth-form__control {
+    margin-top: 5px;
+    display: flex;
+    /* justify-content: flex-end; */
+    justify-content: center;
+}
+
+.auth-form__control-link {
+    text-decoration: none;
+}
+
+.btn {
+    min-width: 142px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    font-size: 1.5rem;
+    padding: 0 12px;
+    cursor: pointer;
+    outline: none;
+    color: var(--text-color);
+    margin: 20px 3px;
+    align-items: center; /* pousse l'élément au milieu de la ligne (colonne) */
+    display: flex; 
+    justify-content: center; /* pousser les éléments au centre de la direction principale */
+    line-height: 1.6rem;
+}
+
+.btn.btn--normal:hover {
+    background-color: rgba(0,0,0,0.5);
+    color: var(--white-color)
+}
+
+.btn.btn--primary {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.btn.auth-form__control-back {
+    margin-right: 8px;
+}
+
+.btn.btn--primary:hover {
+    background-color: #004192;
+}
+
+.auth-form__switch-btn:hover {
+    background-color: #004192;
+}
+
+/* Message de Javascript */
+.form-message {
+    text-align: left;
+    color: var(--white-color);
+    font-size: 1.4em;
+    line-height: 1.6rem;
+    padding: 4px 0 0;
+}
+
+.auth-form__group.invalid .auth-form__input2 {
+    border-color: #f33a58;
+}
+
+.auth-form__group.invalid .form-message {
+    color: #f33a58;
+}
+
+/* Footer */
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+/* Test */
+.grid__column-2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.6667%;
+}
+
+.grid__column-2-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+
+.grid__column-10 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3334%;
+}
+
+.footer {
+    z-index: 3;
+    border-top: 8px solid var(--second-color);
+    background-color: var(--white-color);
+    padding-top: 30px;
+}
+
+.footer__heading {
+    font-size: 1.8rem;
+    text-transform: uppercase; /* Viet in hoa tat ca tieu de */
+    color: var(--text-color);
+    padding-bottom: 8px;
+}
+
+.footer-list {
+    padding-left: 0;
+    list-style: none; /* Bo dau cham truoc moi muc cua list*/
+}
+
+/* The a cua footer */
+.footer-item__link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #737373;
+    padding: 6px 0;
+    display: flex; /* Lam cho padding rong len */
+    align-items: center;
+}
+
+/* Khi cham vao chu thi doi mau */
+.footer-item__link:hover {
+    color: var(--primary-color);
+}
+
+.footer-item__icon {
+    font-size: 1.6rem;
+    margin: -1px 8px 0 0;
+}
+
+.footer__bottom {
+    padding: 15px 0;
+    background-color: #F5F5F5;
+    margin-top: 30px;
+}
+
+.footer__text {
+    margin: 0;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #737373;
+    margin: 3px 0;
+}
+
+.footer__img {
+    padding: 0;
+    margin: 0;
+}
+
+.auth-form__bonus {
+    margin-top: -23px;
+}

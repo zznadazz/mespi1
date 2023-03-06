@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inscription</title>
+        <link rel="stylesheet" href="inscription.css">
+        <link rel="stylesheet" href="/web_service/fontawesome-free-6.1.1-web/css/all.css">
+    </head>
+    <body>
+        <!-- Modal Layout -->
+        <div class="modal">
+            <div class="modal__overlay">
+
+            </div>
+                    
+            <!-- bắt đầu tạo form đăng kí -->
+            <div class="modal__body">
+                <div class="auth-form">
+                    <div class="auth-form__container">
+                        <!-- Đây là phần đầu chỗ hiện đăng kí, đăng nhập -->
+                        <div class="auth-form__header">
+                            <h3 class="auth-form__heading">M'inscrire</h3>
+                            <a class="auth-form__switch-btn-link" href="connexion.html" target="_blank">
+                                <button class="auth-form__switch-btn">J'ai déjà un compte</button>
+                            </a>
+                        </div>
+                            
+                        <!-- Tiếp theo là khung điền thông tin -->
+                        <div class="auth-form__form">
+                            <!-- Thứ nhất là nhập nom -->
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" placeholder="Nom">
+                            </div>
+
+                            <!-- Thứ hai là nhập prénom -->
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" placeholder="Prénom">
+                            </div>
+
+                            <!-- Thứ ba là Email -->
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" placeholder="Email">
+                            </div>
+
+                            <!-- Thứ tư là password -->
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Mot de passe">
+                            </div>
+
+                            <!-- Thứ năm là nhập lại password -->
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Confirmation du mot de passe">
+                            </div>
+                        </div>
+
+                        <!-- Tiếp theo đến phần chấp nhận chính sách bảo mật -->
+                        <div class="auth-form__aside">
+                            <form class="auth-form__policy-text">
+                                <input type="checkbox" name="acceptation">
+                                <label class="auth-form__policy">
+                                    J'accepte les 
+                                    <a href="" class="auth-form__text-link" target="_blank">Conditions d'Utilisation</a> et la
+                                    <a href="" class="auth-form__text-link" target="_blank">Politique de confidentialité</a> de votre site 
+                                </label>
+                            </form>
+                        </div>
+
+                        <!-- Nút điều khiển -->
+                        <div class="auth-form__control">
+                            <a href="mespi__html.html" class="auth-form__control-link" target="_blank">
+                                <button class="btn btn--normal auth-form__control-back">Retourner à la page d'accueil</button>
+                            </a>
+                            <a href="https://www.ameli.fr/val-de-marne/assure" class="auth-form__control-link" target="_blank">
+                                <button class="btn btn--primary">M'inscrire</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Kết nối bằng mạng xã hội 
+                    <div class="auth-form__socials">
+                        <a href="" class="auth-form__socials--facebook btn btn--size-s btn--with--icon" target="_blank">
+                            <i class="auth-form__socials-icon fa-brands fa-facebook"></i>
+                            <span class="auth-form__socials-title">
+                                Connexion avec Facebook
+                            </span>
+                        </a>
+                        <a href="" class="auth-form__socials--google btn btn--size-s btn--with--icon" target="_blank">
+                            <i class="auth-form__socials-icon fa-brands fa-google"></i>
+                            <span class="auth-form__socials-title">
+                                Connexion avec Google
+                            </span>
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- <div class="wrapper">
+            <form class="login">
+                <p class="title">Log in</p>
+                <input type="text" placeholder="Username" autofocus/>
+                <i class="fa fa-user"></i>
+                <input type="password" placeholder="Password" />
+                <i class="fa fa-key"></i>
+                <a href="#">Forgot your password?</a>
+                <button>
+                    <i class="spinner"></i>
+                    <span class="state">Log in</span>
+                </button>
+            </form>
+            <footer><a target="blank" href="http://boudra.me/">boudra.me</a></footer>
+        </div> -->
+    </body>
+</html>

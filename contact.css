@@ -1,0 +1,201 @@
+:root {
+    --primary-color: #01579b;
+    --second-color: #88C6ED;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color: #dbdbdb;
+    --background-color-input: rgba(0,0,0,0.2);
+}
+
+* {
+    box-sizing: inherit;
+}
+
+*{
+    margin: 0%;
+    background-color: white;
+    font-family: 'Roboto' , sans-serif;
+}
+
+.header{
+    min-height: 40vh;
+    width: 100%;
+    background-image: url(medecins.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* position: fixed; */
+    /* top: 10; */
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0.5% 6%;
+}
+
+.menu{
+    flex:1;
+    text-align: right;
+    margin-top: 0.1em;
+    /* position: fixed; */
+}
+
+nav img{
+    width: 150px;
+    vertical-align: middle;
+}
+
+
+.menu input{
+    width: 15em;
+    border-radius: 5px;
+    padding: 6px 12px
+    
+}
+.menu ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.menu ul li a{ 
+    color:black;
+    text-decoration: none;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.menu ul li::after
+{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: rgb(19, 160, 231);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.menu ul li:hover::after{
+    width: 100%;
+}
+
+/* Footer */
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+/* Test */
+.grid__column-2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.6667%;
+}
+
+.grid__column-2-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+
+.grid__column-10 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3334%;
+}
+
+.footer {
+    margin-top: 80px;
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    border-top: 8px solid var(--second-color);
+    background-color: var(--white-color);
+    padding-top: 30px;
+}
+
+.footer__heading {
+    font-size: 1.2rem;
+    text-transform: uppercase; /* Viet in hoa tat ca tieu de */
+    color: var(--text-color);
+    padding-bottom: 8px;
+}
+
+.footer-list {
+    padding-left: 0;
+    list-style: none; /* Bo dau cham truoc moi muc cua list*/
+}
+
+/* The a cua footer */
+.footer-item__link {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #737373;
+    padding: 6px 0;
+    display: flex; /* Lam cho padding rong len */
+    align-items: center;
+}
+
+/* Khi cham vao chu thi doi mau */
+.footer-item__link:hover {
+    color: var(--primary-color);
+}
+
+.footer-item__icon {
+    font-size: 1.6rem;
+    margin: -1px 8px 0 0;
+}
+
+.footer__bottom {
+    padding: 15px 0;
+    background-color: #F5F5F5;
+    margin-top: 30px;
+}
+
+center {
+    background-color: #F5F5F5;
+}
+
+p.footer__text {
+    background-color: #F5F5F5;
+    margin: 0px;
+    padding: 0px;
+}
+
+br.footer__text {
+    background-color: #F5F5F5;
+}
+
+.footer__text {
+    margin: 0;
+    text-align: center;
+    font-size: 1rem;
+    color: #737373;
+    margin: 3px 0;
+}
+
+.footer__img {
+    background-color: #F5F5F5;
+    padding: 0;
+    margin: 0;
+}
